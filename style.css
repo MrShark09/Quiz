@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(0deg,
+            rgba(232, 255, 0, 1) 0%,
+            rgba(1, 19, 255, 1) 100%);
+}
+
+.quiz-container {
+    text-align: center;
+    background-color: #26ff005f;
+    -webkit-box-shadow: 0px 0px 300px 0px rgba(38, 255, 0, 0.5);
+    -moz-box-shadow: 0px 0px 300px 0px rgba(38, 255, 0, 0.5);
+    box-shadow: 0px 0px 300px 0px rgba(38, 255, 0, 0.5);
+    padding: 35px;
+    border-radius:
+        50% 50% 50% 50% / 30% 30% 30% 30%;
+
+    height: auto;
+    width: auto;
+}
+
+.main_button {
+    --button_radius: 0.75em;
+    --button_color: #d400ff;
+    --button_outline_color: #000000;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 20px 50px;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+.main_button:hover .button_top {
+    transform: translateY(-0.33em);
+}
+
+.main_button:active .button_top {
+    transform: translateY(0);
+}
+
+
+.answer-btn {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #d400ff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.answer-btn:hover {
+    transform: scale(1.05);
+}
+
+.answer-btn:active {
+    transform: scale(1);
+}
+
+.answer-btn:hover {
+    transition: transform 250ms;
+}
+
+.answer-btn:active {
+    transition: transform 50ms;
+}
+
+.stats {
+    margin-top: 20px;
+}
+
+.restart {
+    position: relative;
+    background: transparent;
+    margin-top: 10px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    outline-offset: 4px;
+    outline-color: deeppink;
+    transition: filter 250ms;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: hsl(226, 25%, 69%);
+    border-radius: 8px;
+    filter: blur(2px);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: linear-gradient(to right,
+            hsl(248, 39%, 39%) 0%,
+            hsl(248, 39%, 49%) 8%,
+            hsl(248, 39%, 39%) 92%,
+            hsl(248, 39%, 29%) 100%);
+}
+
+.front {
+    display: block;
+    position: relative;
+    border-radius: 8px;
+    background: hsl(248, 53%, 58%);
+    padding: 16px 32px;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+.restart:hover {
+    filter: brightness(110%);
+}
+
+.restart:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.restart:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.restart:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+}
+
+.restart:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.restart:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.correct {
+    background-color: #28a745 !important;
+    transition: background-color 0.5s ease;
+}
+
+.incorrect {
+    background-color: #dc3545 !important;
+    transition: background-color 0.5s ease;
+}
+
+p {
+    font-size: 30px;
+}
+
+.language-switcher {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.language-switcher button {
+    padding: 10px 15px;
+    font-size: 16px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.language-switcher button:hover {
+    background-color: #45a049;
+}
+
+.language-switcher button:active {
+    background-color: #2b793d;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='uk'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Квіз</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="language-switcher">
+        <button onclick="switchLanguage('uk')">Українська</button>
+        <button onclick="switchLanguage('en')">English</button>
+    </div>
+
+    <div class="quiz-container" id="start-screen">
+        <h2>Квіз на 10 запитань</h2>
+        <h2>Щоб почати натисніть "Почати"</h2>
+        <button class="main_button" id="start-btn"><span class="button_top">Почати</span></button>
+    </div>
+
+    <div class="quiz-container" id="quiz-screen" style="display:none;">
+        <div class="question-container">
+            <h2 id="question">Питання</h2>
+        </div>
+        <div class="answer-container">
+            <button class="answer-btn" id="answer1"></button>
+            <button class="answer-btn" id="answer2"></button>
+            <button class="answer-btn" id="answer3"></button>
+            <button class="answer-btn" id="answer4"></button>
+        </div>
+        <div class="stats">
+            <p><span id="timer">10</span></p>
+        </div>
+    </div>
+
+    <div class="quiz-container" id="end-screen" style="display:none;">
+        <h1>Гра завершена!</h1>
+        <p>Правильних відповідей: <span id="correct-answers">0</span></p>
+        <p>Неправильних відповідей: <span id="incorrect-answers">0</span></p>
+        <button class="restart" id="restart-btn"><span class="shadow"></span>
+            <span class="edge"></span>
+            <span class="front"> Заново </span>
+        </button>
+    </div>
+    <audio id="beep1" src="https://www.soundjay.com/buttons/sounds/beep-02.mp3"></audio>
+    <audio id="beep2" src="https://www.soundjay.com/buttons/sounds/beep-01a.mp3"></audio>
+    <script src="main.js"></script>
+</body>
+
+</html>
